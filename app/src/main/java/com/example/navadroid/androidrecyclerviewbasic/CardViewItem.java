@@ -2,6 +2,8 @@ package com.example.navadroid.androidrecyclerviewbasic;
 
 // Original: https://github.com/TRWxCH4MP/SampleRecyclerView
 
+// Our customized item used to get/set information of view that we want to show
+
 public class CardViewItem extends BaseItem {
 
     private int cardViewImage;

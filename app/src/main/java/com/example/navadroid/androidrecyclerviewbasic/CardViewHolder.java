@@ -6,6 +6,10 @@ import android.widget.TextView;
 
 // Original: https://github.com/TRWxCH4MP/SampleRecyclerView
 
+// Our customized view holder
+// holding all views that we want to show for each item (match with list_item.xml)
+// In this case, there are one image view and one text view (both are encapsulated)
+
 public class CardViewHolder extends BaseViewHolder{
     private ImageView imageView;
     private TextView textView;

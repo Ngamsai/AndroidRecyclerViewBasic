@@ -2,6 +2,8 @@ package com.example.navadroid.androidrecyclerviewbasic;
 
 // Original: https://github.com/TRWxCH4MP/SampleRecyclerView
 
+// Base class for item
+
 public class BaseItem {
 
     private int type;

@@ -10,10 +10,15 @@ import java.util.List;
 
 // Original: https://github.com/TRWxCH4MP/SampleRecyclerView
 
+// Main adapter inherits RecyclerView.Adapter<BaseViewHolder>
+// so there are some methods needed to be overridden
+
 public class MainAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     private List<BaseItem> itemList = new ArrayList<>();
 
+
+    // Create the view that is holding our item
     @NonNull
     @Override
     public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -26,6 +31,7 @@ public class MainAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         throw new RuntimeException("Type doesn't not match");
     }
 
+    // Bind the view holder (View) to the item (Model)
     @Override
     public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
         BaseItem i = itemList.get(position);
@@ -36,6 +42,7 @@ public class MainAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         }
     }
 
+    // The following methods used to operate list such as count, get, set
     @Override
     public int getItemCount() {
         if (!itemList.isEmpty()) { // || itemList != null) {
@@ -51,7 +58,6 @@ public class MainAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     public void setItemList(List<BaseItem> itemList) {
         this.itemList = itemList;
-
         notifyDataSetChanged();
     }
 }

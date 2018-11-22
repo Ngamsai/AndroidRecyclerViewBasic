@@ -21,15 +21,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        // Bind recycleView
+        recyclerView = findViewById(R.id.recycler_view);
+
+        // TODO You can change the layout manager here.
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
+        // Set the adapter
         adapter = new MainAdapter();
+
+        // Add list of items to adapter
         adapter.setItemList(createItem());
+
+        // Bind adapter to recyclerView
         recyclerView.setAdapter(adapter);
     }
 
+    // Test creating list of items
     private List<BaseItem> createItem() {
         List<BaseItem> itemList = new ArrayList<>();
         for(int item=0; item<10; item++) {

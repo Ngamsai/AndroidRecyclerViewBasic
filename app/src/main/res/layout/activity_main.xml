@@ -9,9 +9,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--This is where we put our list, make sure that tools:listitem is set-->
     <android.support.v7.widget.RecyclerView
         tools:listitem="@layout/list_item"
-        android:id="@+id/recyclerView"
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
